@@ -1,0 +1,19 @@
+{
+  "name": "software-updater",
+  "version": "1.0.0",
+  "description": "A API + Web Application for update softwares from S&J Automação Comercial",
+  "main": "index.js",
+  "repository": "https://github.com/igor-claudino/software-updater.git",
+  "author": "Igor Claudino <igor.claudino.ic@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.2",
+    "multer": "^1.4.1",
+    "socket.io": "^2.2.0"
+  }
+}
