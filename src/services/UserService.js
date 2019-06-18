@@ -6,11 +6,13 @@ const crypto = require('crypto');
 
 class UserService {
     async store(req, res) {
-        const { username } = req.body;
+        const { username, cpf } = req.body;
         try {
             if (await User.findOne({ username }))
                 return res.status(400).send({ error: 'User already exists' });
 
+            if (cpf.length !== 11 || !/\d+/.test(cpf))
+                return res.status(400).send({ error: 'Invalid CPF' });
             const user = await User.create(req.body);
             user.password = undefined;
 
@@ -39,6 +41,8 @@ class UserService {
             if (!user)
                 return res.status(400).send({ error: 'User not found' });
 
+            if (cpf.length !== 11 || !/\d+/.test(cpf))
+                return res.status(400).send({ error: 'Invalid CPF' });
             user.name = name;
             user.email = email;
             user.username = username;
