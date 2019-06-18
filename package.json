@@ -6,6 +6,9 @@
   "repository": "https://github.com/igor-claudino/software-updater.git",
   "author": "Igor Claudino <igor.claudino.ic@gmail.com>",
   "license": "MIT",
+  "scripts":{
+    "start":"node src/server.js",
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
